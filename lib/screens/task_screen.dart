@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../custom_widgets/task_list.dart';
 class TaskScreen extends StatefulWidget {
   const TaskScreen({Key? key}) : super(key: key);
 
@@ -15,7 +17,6 @@ class _TaskScreenState extends State<TaskScreen> {
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
         onPressed: (){
-
         },
       ),
       body:Column(
@@ -57,6 +58,7 @@ class _TaskScreenState extends State<TaskScreen> {
       ),
           Expanded(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -65,10 +67,16 @@ class _TaskScreenState extends State<TaskScreen> {
 
                   )
               ),
+              child:TaskList(),
+
             ),
+
           )
     ],
     ),
     );
   }
 }
+
+
+
