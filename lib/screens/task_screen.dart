@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todeoy_app/screens/add_bottom_screen.dart';
 
 import '../custom_widgets/task_list.dart';
 class TaskScreen extends StatefulWidget {
@@ -9,6 +10,7 @@ class TaskScreen extends StatefulWidget {
 }
 
 class _TaskScreenState extends State<TaskScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +19,8 @@ class _TaskScreenState extends State<TaskScreen> {
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
         onPressed: (){
+          showModalBottomSheet(context: context, builder:(context)=>AddBottomSheet()
+          );
         },
       ),
       body:Column(
